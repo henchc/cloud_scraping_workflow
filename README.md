@@ -1,2 +1,2 @@
 # cloud_workflow
-scripts and instructions for common cloud workflow
+scripts and instructions for common cloud scraping workflow
