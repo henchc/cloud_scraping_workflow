@@ -27,6 +27,10 @@ set ssl-allow true
 
 Then enter you username and password.
 
+```
+user your_name@berkeley.edu
+```
+
 You can now use basic bash commands to navigate the file structure of your Box account. Use `pwd`, `cd`, `ls`, and `mkdir` to create a new directory and navigate into it. Then to transfer the file into the working directory of your Box account we use `put`: 
 
 ```
