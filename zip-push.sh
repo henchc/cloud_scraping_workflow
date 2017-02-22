@@ -6,7 +6,7 @@ zip -r $1.zip $1/
 sleep 3
 
 # send zip file to box and log the 'ls' of that folder on box
-lftp -e "set ssl-allow true; put -O 'BOX FILE PATH' $1.zip; ls 'BOX FILE PATH'; bye" -u LOGIN,PASSWORD ftp.box.com > box_log.log
+lftp -e "set ssl-allow true; put -O 'BOX FOLDER PATH' $1.zip; ls 'BOX FOLDER PATH'; bye" -u LOGIN,PASSWORD ftp.box.com > box_log.log
 
 sleep 3
 
