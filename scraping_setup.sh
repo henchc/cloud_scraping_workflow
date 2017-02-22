@@ -5,7 +5,7 @@ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 sleep 10
 
 chmod +x Miniconda-latest-Linux-x86_64.sh
-bash Miniconda-latest-Linux-x86_64.sh
+bash Miniconda*.sh
 
 sleep 10
 
