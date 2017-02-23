@@ -9,12 +9,13 @@ bash Miniconda*.sh
 
 sleep 10
 
-# install relevant scraping packages
+# install apt packages
+sudo apt-get -f install
+sudo apt-get install zip
+sudo apt-get install python-pip
+sudo apt-get install lftp
 
-pip install bs4
-pip install lxml
-pip install selenium
-
+sleep 10
 
 # download chrome
 
@@ -41,6 +42,8 @@ sudo mv -f chromedriver /usr/local/share/chromedriver
 sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 
-# install LFTP for transfer of scraped files to Box
-
-sudo apt-get install lftp
+# install relevant scraping packages
+exec bash
+pip install bs4
+pip install lxml
+pip install selenium
