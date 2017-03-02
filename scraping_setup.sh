@@ -47,3 +47,5 @@ exec bash
 pip install bs4
 pip install lxml
 pip install selenium
+pip install jupyter
+export XDG_RUNTIME_DIR=""
