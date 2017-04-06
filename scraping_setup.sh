@@ -10,20 +10,25 @@ bash Miniconda*.sh
 sleep 10
 
 # install apt packages
-sudo apt-get -f install
-sudo apt-get install zip
-sudo apt-get install python-pip
-sudo apt-get install lftp
+sudo apt-get -y install zip
+sudo apt-get -y install python-pip
+sudo apt-get -y install lftp
 
 sleep 10
 
-# download chrome
+# download chrome; NOTE: newest version does not allow auto-pdf disable
 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+# sleep 10
+
+# sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb
+
+wget http://www.slimjetbrowser.com/chrome/lnx/chrome64_56.0.2924.87.deb
 
 sleep 10
 
-sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb
+sudo dpkg -i --force-depends chrome64_56.0.2924.87.deb
 
 # download chrome driver
 # help from https://christopher.su/2015/selenium-chromedriver-ubuntu/
@@ -42,8 +47,9 @@ sudo mv -f chromedriver /usr/local/share/chromedriver
 sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 
+sudo apt-get -fy install
+
 # install relevant scraping packages
-exec bash
 pip install bs4
 pip install lxml
 pip install selenium
