@@ -22,8 +22,9 @@ sudo dpkg -i --force-depends chrome64_56.0.2924.87.deb
 # download chrome driver
 # help from https://christopher.su/2015/selenium-chromedriver-ubuntu/
 # and http://blog.likewise.org/2015/01/setting-up-chromedriver-and-the-selenium-webdriver-python-bindings-on-ubuntu-14-dot-04/
-LATEST=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
-wget http://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
+# LATEST=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+# must be 2.29 now
+wget http://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip
 
 # unzip chromedriver and put in share and binaries
 unzip chromedriver_linux64.zip
